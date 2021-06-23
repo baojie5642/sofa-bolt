@@ -203,8 +203,7 @@ public abstract class AbstractConnectionFactory implements ConnectionFactory {
         int highWaterMark = this.confInstance.netty_buffer_high_watermark();
         if (lowWaterMark > highWaterMark) {
             throw new IllegalArgumentException(
-                String
-                    .format(
+                String.format(
                         "[client side] bolt netty high water mark {%s} should not be smaller than low water mark {%s} bytes)",
                         highWaterMark, lowWaterMark));
         } else {
